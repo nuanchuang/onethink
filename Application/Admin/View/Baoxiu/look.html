@@ -1,0 +1,48 @@
+<extend name="Public/base"/>
+
+<block name="body">
+    <div class="main-title">
+        <h2>报修详情</h2>
+    </div>
+    <!-- 内容区 -->
+    <div id="main-content">
+        <div id="top-alert" class="fixed alert alert-error" style="display: none;">
+            <button class="close fixed" style="margin-top: 4px;">&times;</button>
+            <div class="alert-content">这是内容</div>
+        </div>
+        <div id="main" class="main">
+            <div class="main-title">
+                <h2>报修详情</h2>
+            </div>
+            <form action="" method="post" class="form-horizontal" name="list">
+                <div class="form-item">
+                    <span class="item-label">报修编号：<span class="check-tips">{$list.id}</span></span>
+                </div>
+                <div class="form-item">
+                    <span class="item-label">状态：<span class="check-tips">{$list.status}</span></span>
+                </div>
+                <div class="form-item">
+                    <span class="item-label">报修人：<span class="check-tips">{$list.name}</span></span>
+                </div>
+                <div class="form-item">
+                    <span class="item-label">报修人电话：<span class="check-tips">{$list.tel}</span></span>
+                </div>
+                <div class="form-item">
+                    <span class="item-label">标题：<span class="check-tips">{$list.title}</span></span>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">说明:</label>
+                    <div class="controls">
+                        <label class="textarea input-large">
+                            <textarea disabled name="remark">{$list.text}</textarea>
+                        </label>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="form-item">
+            <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+        </div>
+    </div>
+    <!-- /内容区 -->
+</block>
