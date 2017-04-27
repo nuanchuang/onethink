@@ -50,63 +50,18 @@
 
 <div class="container-fluid">
     
-    <div class="indexImg row">
-        <img src="/Public/Home/images/index.png" width="100%" />
-    </div>
-    <div class="serviceList text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <a href="<?php echo U('index/notice');?>">
-                        <div class="indexLabel label-danger">
-                            <span class="glyphicon glyphicon-bullhorn"></span><br/>
-                            小区通知
-                        </div>
-                    </a>
+    <?php if(is_array($documents)): $i = 0; $__LIST__ = $documents;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$documents): $mod = ($i % 2 );++$i;?><div class="row noticeList">
+            <a href="<?php echo U('index/notice_detail');?>">
+                <div class="col-xs-2">
+                    <img class="noticeImg" src="<?php echo get_cover($documents['cover_id'],'path');?>" />
                 </div>
-                <div class="col-xs-4">
-                    <a href="service.html">
-                        <div class="indexLabel label-warning">
-                            <span class="glyphicon glyphicon-ok-circle"></span><br/>
-                            便民服务
-                        </div>
-                    </a>
+                <div class="col-xs-10">
+                    <p class="title"><?php echo ($documents["title"]); ?></p>
+                    <p class="intro"><?php echo ($documents["description"]); ?></p>
+                    <p class="info"><?php echo ($documents["view"]); ?><span class="pull-right"><?php echo (date('Y-m-d',$documents["create_time"])); ?></span> </p>
                 </div>
-                <div class="col-xs-4">
-                    <a href="<?php echo U('index/add');?>">
-                        <div class="indexLabel label-info">
-                            <span class="glyphicon glyphicon-heart-empty"></span><br/>
-                            在线报修
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="notice.html">
-                        <div class="indexLabel label-success">
-                            <span class="glyphicon glyphicon-briefcase"></span><br/>
-                            商家活动
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="zushou.html">
-                        <div class="indexLabel label-primary">
-                            <span class="glyphicon glyphicon-usd"></span><br/>
-                            小区租售
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="notice.html">
-                        <div class="indexLabel label-default">
-                            <span class="glyphicon glyphicon-apple"></span><br/>
-                            小区活动
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
+            </a>
+        </div><?php endforeach; endif; else: echo "" ;endif; ?>
 
 </div>
 </div>

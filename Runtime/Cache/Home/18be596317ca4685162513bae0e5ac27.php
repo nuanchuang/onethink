@@ -50,62 +50,36 @@
 
 <div class="container-fluid">
     
-    <div class="indexImg row">
-        <img src="/Public/Home/images/index.png" width="100%" />
-    </div>
-    <div class="serviceList text-center">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-4">
-                    <a href="<?php echo U('index/notice');?>">
-                        <div class="indexLabel label-danger">
-                            <span class="glyphicon glyphicon-bullhorn"></span><br/>
-                            小区通知
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="service.html">
-                        <div class="indexLabel label-warning">
-                            <span class="glyphicon glyphicon-ok-circle"></span><br/>
-                            便民服务
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="<?php echo U('index/add');?>">
-                        <div class="indexLabel label-info">
-                            <span class="glyphicon glyphicon-heart-empty"></span><br/>
-                            在线报修
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="notice.html">
-                        <div class="indexLabel label-success">
-                            <span class="glyphicon glyphicon-briefcase"></span><br/>
-                            商家活动
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="zushou.html">
-                        <div class="indexLabel label-primary">
-                            <span class="glyphicon glyphicon-usd"></span><br/>
-                            小区租售
-                        </div>
-                    </a>
-                </div>
-                <div class="col-xs-4">
-                    <a href="notice.html">
-                        <div class="indexLabel label-default">
-                            <span class="glyphicon glyphicon-apple"></span><br/>
-                            小区活动
-                        </div>
-                    </a>
-                </div>
+    <div class="container-fluid" name="text">
+        <form action="<?php echo U('add');?>" method="post">
+            <div class="form-group">
+                <label>您的姓名(必填):</label>
+                <input type="text" name="name" class="form-control" />
             </div>
-        </div>
+            <div class="form-group">
+                <label>您的电话(必填):</label>
+                <input type="text" name="tel" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>您的地址(必填):</label>
+                <input type="text" name="address" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>标题(必填):</label>
+                <input type="text" name="title" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label>内容(详细描述需要报修的内容):</label>
+                <textarea type="text" name="text" class="form-control"></textarea>
+            </div>
+            <!--<div class="form-group">-->
+            <!--<div><a href="#"><span class="glyphicon glyphicon-plus onlineUpImg"></span></a></div>-->
+            <!--<label>图片(最多上传5张,可不上传):</label>-->
+            <!--</div>-->
+            <div class="form-group">
+                <button class="btn btn-primary onlineBtn">确认提交</button>
+            </div>
+        </form>
     </div>
 
 </div>
