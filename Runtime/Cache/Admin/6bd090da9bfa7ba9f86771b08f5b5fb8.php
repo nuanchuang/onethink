@@ -132,6 +132,7 @@
 				<td colspan="9" class="text-center"> aOh! 暂时还没有内容! </td><?php endif; ?>
 			</tbody>
 		</table>
+        <div class="result page"><?php echo ($_page); ?></div>
 	</div>
 
         </div>

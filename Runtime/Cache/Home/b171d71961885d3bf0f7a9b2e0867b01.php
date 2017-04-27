@@ -1,6 +1,8 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
 <html>
 <head>
+	<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../css/style.css" rel="stylesheet">
 	<meta charset="UTF-8">
 <title><?php echo C('WEB_SITE_TITLE');?></title>
 <link href="/Public/static/bootstrap/css/bootstrap.css" rel="stylesheet">
@@ -73,6 +75,11 @@
 	<!-- 主体 -->
 	
 <header class="jumbotron subhead" id="overview">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--<link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet">-->
+    <!--<link href="../css/style.css" rel="stylesheet">-->
   <div class="container">
     <h2>用户登录</h2>
     <p><span><span class="pull-left"><span>还没有账号? <a href="<?php echo U('User/register');?>">立即注册</a></span> </span></p>
@@ -85,7 +92,7 @@
         
 <section>
 	<div class="span12">
-        <form class="login-form" action="/index.php?s=/Home/User/login.html" method="post">
+        <form class="login-form" action="/index.php?s=/User/login.html" method="post">
           <div class="control-group">
             <label class="control-label" for="inputEmail">用户名</label>
             <div class="controls">

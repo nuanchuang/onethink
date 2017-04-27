@@ -16,10 +16,10 @@ use Think\Model;
  */
 
 class BaoxiuModel extends Model {
-    public static $status = ['-1'=>'已接收',0=>'处理中',1=>'处理完成'];
+//    public static $status = ['-1'=>'已接收',0=>'处理中',1=>'处理完成'];
     protected $_validate = array(
         array('name','require','报修人不能为空'),
-        array('tel','require','max=>11','电话不能为空'),
+        array('tel','require','电话不能为空'),
         array('address','require','地址不能为空'),
         array('title','require','标题（简述问题）不能为空'),
         array('text','require','问题不能为空'),

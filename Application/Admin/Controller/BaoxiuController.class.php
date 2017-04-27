@@ -36,6 +36,7 @@ class BaoxiuController extends AdminController {
 //        <switch name="$list->status">
 //            <case value="0">处理中</case>
 //            <case value="1">处理完成</case>
+        $list = $this->lists('Baoxiu');
 //        </switch>
         $this->assign('list', $list);
 //        $this->assign('pid', $pid);
