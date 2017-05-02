@@ -1,0 +1,23 @@
+<extend name="Base/public"/>
+<block name="text">
+    <!--<div class="container-fluid" id="content_list">-->
+        <volist name="baoxiues" id="baoxiu">
+        <div class="row noticeList">
+            <a href="/Repair/detail/id/33.html">
+                <div class="col-xs-3">
+                    <p class="title text-info ">报修人：{$baoxiu.name}</p>
+                </div>
+                <div class="col-xs-6">
+                    <p class="title">报修标题：{$baoxiu.title}</p>
+                </div>
+                <div class="col-xs-push-3">
+                    <p class="title text-danger">{$baoxiu.status}</p>
+                </div>
+            </a>
+        </div>
+        </volist>
+    <!--</div>-->
+    <div class="text-center">
+        <button type="button" class="btn btn-info ajax-page">获取跟多~~~</button>
+    </div>
+</block>

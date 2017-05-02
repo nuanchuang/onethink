@@ -97,4 +97,11 @@ return array(
         'callback' => false, //检测文件是否存在回调函数，如果存在返回文件信息数组
     ), //附件上传配置（文件上传类配置）
 
+    'HTML_CACHE_ON'     =>    false, // 开启静态缓存
+    'HTML_CACHE_TIME'   =>    60,   // 全局静态缓存有效期（秒）
+    'HTML_FILE_SUFFIX'  =>    '.shtml', // 设置静态缓存文件后缀
+    'HTML_CACHE_RULES'  =>     array(
+        // 定义格式1 数组方式
+        'Index:index'    =>     array('{:module}/{:controller}_{:action}', 24*3600*7, 'md5'),
+    )
 );

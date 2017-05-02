@@ -15,7 +15,9 @@ use OT\DataDictionary;
  * 主要获取首页聚合数据
  */
 class IndexController extends HomeController {
-
+/*
+ * 导航首页部分
+ */
 	//系统首页
     public function index(){
 
@@ -30,6 +32,7 @@ class IndexController extends HomeController {
         $this->display();
     }
 
+    //报修添加
     public function add(){
         if(IS_POST){
             $Baoxiu = D('Baoxiu');
@@ -65,16 +68,124 @@ class IndexController extends HomeController {
         }
     }
 
+    //小区活动
     public function notice(){
         $document = M('Document');
-        $documents = $document->where('status=1')->select();
+        $name['category_id'] = '40';
+        $name['status'] = '1';
+        $documents = $document->where($name)->select();
 
         $this->assign('documents',$documents);
         $this->display('notice');
     }
 
-
+    //活动详情
     public function notice_detail(){
         $this->display('notice_detail');
+    }
+
+    //商家活动
+    public function activity(){
+        $document = M('Document');
+        $name['category_id'] = '42';
+        $name['status'] = '1';
+        $documents = $document->where($name)->select();
+
+        $this->assign('documents',$documents);
+        $this->display('activity');
+    }
+
+    //小区活动
+    public function re(){
+        $document = M('Document');
+        $name['category_id'] = '44';
+        $name['status'] = '1';
+        $documents = $document->where($name)->select();
+
+        $this->assign('documents',$documents);
+        $this->display('re');
+    }
+
+
+    //便民服务
+    public function service(){
+        $document = M('Document');
+        $name['category_id'] = '45';
+        $name['status'] = '1';
+        $documents = $document->where($name)->select();
+
+        $this->assign('documents',$documents);
+        $this->display('service');
+    }
+
+    //小区租售
+    public function zushou(){
+        $document = M('Document');
+//        $name['category_id'] = '45';
+//        $name['status'] = '1';
+//        $documents = $document->where($name)->select();
+
+//        $this->assign('documents',$documents);
+        $this->display('zushou');
+    }
+
+
+    //便民服务
+    public function noticeALL(){
+        $document = M('Document');
+        $name['status'] = '1';
+        $documents = $document->where($name)->select();
+
+        $this->assign('documents',$documents);
+        $this->display('noticeALL');
+    }
+
+    /*
+ * 导航页服务
+ */
+    //服务
+    public function fuwu(){
+//        $document = M('Document');
+        $this->display('fuwu');
+    }
+
+    //业主认证
+    public function yezhurenzheng(){
+//        $document = M('Document');
+        $this->display('yezhurenzheng');
+    }
+
+    //关于我们
+    public function about(){
+//        $document = M('Document');
+        $this->display('about');
+    }
+
+
+    /*
+     * 导航页发现
+     */
+    //发现
+    public function faxian(){
+//        $document = M('Document');
+        $this->display('faxian');
+    }
+
+
+    /*
+     * 导航页个人中心
+     */
+    //我的
+    public function my(){
+//        $document = M('Document');
+        $this->display('my');
+    }
+
+    //报修管理
+    public function mybaoxiu(){
+        $baoxiu = M('Baoxiu');
+        $baoxiues = $baoxiu->select();
+        $this->assign('baoxiues',$baoxiues);
+        $this->display('mybaoxiu');
     }
 }

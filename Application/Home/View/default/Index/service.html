@@ -1,0 +1,23 @@
+<extend name="Base/public"/>
+<block name="text">
+    <volist name="documents" id="documents">
+        <div class="row noticeList">
+            <a href="{:U('index/service_detail')}">
+                <div class="col-xs-2">
+                    <img class="noticeImg" src="{:get_cover($documents['cover_id'],'path')}" />
+                </div>
+                <div class="col-xs-10">
+                    <p class="title">{$documents.title}</p>
+                    <p class="intro">{$documents.description}</p>
+                    <p class="info">{$documents.view}<span class="pull-right">{$documents.create_time|date='Y-m-d',###}</span> </p>
+                </div>
+            </a>
+        </div>
+    </volist>
+    <empty name="documents">
+    <td class="text-center"> aOh! 暂时还没有内容! </td>
+    </empty>
+    <div class="text-center">
+        <input type="button" class="btn btn-info " value="获取更多~">
+    </div>
+</block>

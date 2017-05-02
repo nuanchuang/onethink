@@ -4,8 +4,9 @@
     
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
         <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
-        <title>Bootstrap 101 Template</title>
+        <title>微信物业管理系统</title>
 
         <!-- Bootstrap -->
         <link href="/Public/Home/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,13 +36,13 @@
                     <p class="navbar-text"><a href="index.html" class="navbar-link">首页</a></p>
                 </div>
                 <div class="col-xs-3">
-                    <p class="navbar-text"><a href="fuwu.html" class="navbar-link">服务</a></p>
+                    <p class="navbar-text"><a href="<?php echo U('index/fuwu');?>" class="navbar-link">服务</a></p>
                 </div>
                 <div class="col-xs-3">
-                    <p class="navbar-text"><a href="faxian.html" class="navbar-link">发现</a></p>
+                    <p class="navbar-text"><a href="<?php echo U('index/faxian');?>" class="navbar-link">发现</a></p>
                 </div>
                 <div class="col-xs-3">
-                    <p class="navbar-text"><a href="my.html" class="navbar-link">我的</a></p>
+                    <p class="navbar-text"><a href="<?php echo U('index/my');?>" class="navbar-link">我的</a></p>
                 </div>
             </div>
         </nav>
@@ -90,8 +91,9 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="/Public/Home/bootstrap/js/bootstrap.min.js"></script>
     
-    
 
-    
+
+
+
 </body>
 </html>
